@@ -17,18 +17,26 @@
         </div>
 
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-white p-4 lg:p-0 z-20" id="nav-content">
-            <ul class="list-reset lg:flex justify-end flex-1 items-center">
-                <li class="mr-3">
-                    <a class="inline-block py-2 px-4 text-white font-bold no-underline" href="#">Home</a>
+            <ul v-for="link in links" :key="link" class="list-reset lg:flex justify-end flex-1 items-center">
+                <li class="mr-1">
+                    <router-link class="inline-block py-2 px-2 text-white font-bold no-underline" :to="link.url">{{ link.name }}</router-link>
                 </li>
-                <li class="mr-3">
+                <!-- <li class="mr-3">
                     <a class="inline-block text-white no-underline hover:text-white hover:text-underline py-2 px-4" href="#">About</a>
                 </li>
                 <li class="mr-3">
                     <a class="inline-block text-white no-underline hover:text-white hover:text-underline py-2 px-4" href="#">Contact</a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
 </nav>
 </template>
+
+<script>
+export default {
+    props: {
+        links: Array
+    }
+}
+</script>

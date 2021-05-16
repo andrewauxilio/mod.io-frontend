@@ -1,7 +1,7 @@
 <template>
 <div class="gradient leading-relaxed tracking-wide flex flex-col" style="background-image: url('https://static.mod.io/v1/images/home/bg-tiles.jpg'); background-size: contain, cover;">
     <!--Nav-->
-    <navbar />
+    <navbar :links="links"/>
 
     <!--View-->
     <router-view />
@@ -19,6 +19,16 @@ export default {
     components: {
         Navbar,
         Footer
+    },
+
+    data() {
+        return {
+          links: [
+            { name: 'Home', url: '/'},
+            { name: 'About', url: '/about'},
+            { name: 'Contact', url: '/contact'},
+          ]
+        }
     }
 }
 </script>
