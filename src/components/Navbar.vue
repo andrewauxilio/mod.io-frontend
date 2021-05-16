@@ -1,5 +1,5 @@
 <template>
-<nav id="header" class="w-full z-30 top-0 text-white py-1 lg:py-6">
+<nav id="header" class="animate__animated animate__fadeIn w-full z-30 top-0 text-white py-1 lg:py-6">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-6">
         <div class="pl-4 flex items-center">
             <a class="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
@@ -17,16 +17,10 @@
         </div>
 
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-white p-4 lg:p-0 z-20" id="nav-content">
-            <ul v-for="link in links" :key="link" class="list-reset lg:flex justify-end flex-1 items-center">
-                <li class="mr-1">
-                    <router-link class="inline-block py-2 px-2 text-white font-bold no-underline" :to="link.url">{{ link.name }}</router-link>
+            <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                <li v-for="link in links" :key="link" class="mr-3">
+                    <router-link class="inline-block py-2 px-2 text-white no-underline" :to="link.url">{{ link.name }}</router-link>
                 </li>
-                <!-- <li class="mr-3">
-                    <a class="inline-block text-white no-underline hover:text-white hover:text-underline py-2 px-4" href="#">About</a>
-                </li>
-                <li class="mr-3">
-                    <a class="inline-block text-white no-underline hover:text-white hover:text-underline py-2 px-4" href="#">Contact</a>
-                </li> -->
             </ul>
         </div>
     </div>

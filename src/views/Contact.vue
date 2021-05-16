@@ -1,5 +1,5 @@
 <template>
-<div class="container mx-auto h-screen">
+<div class="animate__animated animate__fadeIn animate__slow container mx-auto h-screen">
     <div class="text-center px-3 lg:px-0">
         <h1 class="my-4 text-2xl md:text-3xl text-white lg:text-5xl font-black leading-tight">
             Contact

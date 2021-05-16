@@ -1,6 +1,6 @@
 <template>
 <div class="container mx-auto h-screen">
-    <div class="text-center px-3 lg:px-0">
+    <div class="animate__animated animate__fadeIn animate__slow text-center px-3 lg:px-0">
         <h1 class="my-4 text-2xl md:text-3xl text-white lg:text-5xl font-black leading-tight">
             Mod support for every platform
         </h1>
@@ -12,12 +12,12 @@
         </button>
     </div>
 
-    <div class="flex items-center w-full mx-auto content-end">
+    <div class="animate__animated animate__fadeIn flex items-center w-full mx-auto content-end">
         <img src="https://binary.modcdn.io/misc/hero-art.svg">
     </div>
 </div>
 
-<section class="bg-white border-b py-8 text-center">
+<section class="animate__animated animate__fadeIn animate__slow bg-white border-b py-8 text-center">
     <div class="container mx-auto flex flex-wrap pt-4 pb-12">
         <h2 class="w-full my-2 text-5xl font-black leading-tight text-center text-white">
             How to launch your creator community
