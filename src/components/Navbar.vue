@@ -8,7 +8,7 @@
         </div>
 
         <div class="block lg:hidden pr-4">
-            <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-400 hover:text-white hover:border-blue-500 appearance-none focus:outline-none">
+            <button @click="toggleNav" id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-400 hover:text-white hover:border-blue-500 appearance-none focus:outline-none">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -16,7 +16,7 @@
             </button>
         </div>
 
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-white p-4 lg:p-0 z-20" id="nav-content">
+        <div v-bind:class="{hidden: !isActive}" class="animate__animated animate__fadeIn w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 text-white p-4 lg:p-0 z-20" id="nav-content">
             <ul class="list-reset lg:flex justify-end flex-1 items-center">
                 <li v-for="link in links" :key="link" class="mr-3">
                     <router-link class="inline-block py-2 px-2 text-white no-underline" :to="link.url">{{ link.name }}</router-link>
@@ -31,6 +31,18 @@
 export default {
     props: {
         links: Array
+    },
+
+    data() {
+        return {
+            isActive: false
+        }
+    },
+
+    methods: {
+        toggleNav() {
+            this.isActive = !this.isActive;
+        }
     }
 }
 </script>
