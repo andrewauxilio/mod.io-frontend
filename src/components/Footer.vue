@@ -1,5 +1,5 @@
 <template>
-<footer class="gradient text-center">
+<footer class="animate__animated animate__fadeIn gradient text-center">
     <div class="container mx-auto mt-8 px-8">
         <div class="w-full flex flex-col md:flex-row py-6">
             <div class="flex-1">
